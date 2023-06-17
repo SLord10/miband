@@ -32,7 +32,8 @@ export class ClientListComponent {
   getClientById(client:Client){
     this.clientService.getOneClient(client).subscribe(res=>{
           this.selectedClient = client;
-          this.isModalOpen = true; 
+          this.isModalOpen = true;
+ 
         })
         
   }
@@ -68,4 +69,11 @@ export class ClientListComponent {
     }
   }
 
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
+
 }
+
+
