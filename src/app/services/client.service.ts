@@ -20,6 +20,10 @@ export class ClientService {
     return this.http.get<Client>(`${this.url}/getClientById/${id}`);
   }
 
+  
+  
+
+
   postClient(client: Client): Observable<any> {
     return this.http.post(`${this.url}/saveClient`, client, {
       responseType: 'text',
@@ -58,6 +62,10 @@ export class ClientService {
   getHeartBeat(client:Client){
     return this.http.get<Heartbeat[]>("http://154.49.137.28:8080/getHeartbeatsByClient/"+client.id)
     
+  }
+
+  getOneClient(client: Client) {
+    return this.http.get<Client>("http://154.49.137.28:8080/getClientById/"+client.id);
   }
 
 }

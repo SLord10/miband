@@ -9,7 +9,8 @@ import { ClientService } from 'src/app/services/client.service';
   styleUrls: ['./client-list.component.css']
 })
 export class ClientListComponent {
-
+  isModalOpen = false;
+  selectedClient: Client | undefined;
   clients: Client[] = [];
   client: Client = new Client();
   deletedSuccessfully: boolean = false;
@@ -27,6 +28,15 @@ export class ClientListComponent {
       this.clients = clients;
     });
   }
+
+  getClientById(client:Client){
+    this.clientService.getOneClient(client).subscribe(res=>{
+          this.selectedClient = client;
+          this.isModalOpen = true; 
+        })
+        
+  }
+
 
   deleteClient(id: number): void {
 
