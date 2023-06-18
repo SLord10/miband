@@ -24,4 +24,12 @@ import { AppRoutingModule } from './app-routing.module';
   bootstrap: [AppComponent],
   exports: []
 })
-export class AppModule { }
+export class AppModule {
+
+  darkModeEnabled = false;
+
+  toggleDarkMode() {
+    this.darkModeEnabled = !this.darkModeEnabled;
+  }
+
+ }

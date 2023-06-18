@@ -8,9 +8,14 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-  <app-root></app-root>
+<body class="dark:bg-gray-900" >
+  <app-root class="dark:bg-gray-900"></app-root>
+
+  <script>
+    document.body.classList.toggle('dark', darkModeEnabled );
+  </script>
 </body>
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
 </html>

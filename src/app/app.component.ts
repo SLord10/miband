@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mibandfrontend';
+
+  darkModeEnabled = false;
+
+  toggleDarkMode() {
+    this.darkModeEnabled = !this.darkModeEnabled;
+  }
+
+
 }

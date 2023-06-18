@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Client } from 'src/app/models/client.model';
 import { ClientService } from 'src/app/services/client.service';
 
+
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',
@@ -14,6 +15,7 @@ export class ClientListComponent {
   clients: Client[] = [];
   client: Client = new Client();
   deletedSuccessfully: boolean = false;
+
 
   constructor(private clientService: ClientService,
               private router: Router)
@@ -73,6 +75,8 @@ export class ClientListComponent {
   closeModal(): void {
     this.isModalOpen = false;
   }
+
+  
 
 }
 

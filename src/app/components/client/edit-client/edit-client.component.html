@@ -1,9 +1,9 @@
-<div class="p-4 sm:ml-64">
+<div class="p-4 sm:ml-64 h-screen dark:bg-gray-900">
   <br> <br>
-<div class="relative flex flex-col overflow-hidden animate-fade-in">
+<div class="dark:bg-gray-900 relative flex flex-col overflow-hidden animate-fade-in">
 
 
-  <div *ngIf="editedSuccessfully" [class.opacity-100]="editedSuccessfully" id="alert-border-3" class="absolute flex p-4 mb-4 left-[50%] right-[50%] translate-x-[-50%] w-[55%] transition-opacity duration-900 ease-in-out opacity-0 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
+  <div *ngIf="editedSuccessfully" [class.opacity-100]="editedSuccessfully" id="alert-border-3" class="absolute flex p-4 mb-4 left-[50%] right-[50%] translate-x-[-50%] w-[55%] transition-opacity duration-900 ease-in-out opacity-0 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-700 dark:border-green-800" role="alert">
     <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
     <div class="ml-3 text-sm font-medium">
       Client Modifié Avec Succès.
@@ -14,7 +14,7 @@
     </button>
 </div>
 
-<div *ngIf="clientNotValid" [class.opacity-100]="clientNotValid" id="alert-border-2" class="absolute flex p-4 mb-4 left-[50%] right-[50%] translate-x-[-50%] w-[55%] transition-opacity duration-900 ease-in-out opacity-0  text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800" role="alert">
+<div *ngIf="clientNotValid" [class.opacity-100]="clientNotValid" id="alert-border-2" class="absolute flex p-4 mb-4 left-[50%] right-[50%] translate-x-[-50%] w-[55%] transition-opacity duration-900 ease-in-out opacity-0  text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-700 dark:border-red-800" role="alert">
   <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
   <div class="ml-3 text-sm font-medium">
     Données Manquantes.
@@ -27,8 +27,8 @@
 
 
 
-  <h2 class="font-serif font-semibold mt-[5rem] mb-[1rem] mx-auto">Modifier un client</h2>
-  <form (ngSubmit)="submitForm()" class="w-[55%] mx-auto">
+  <h2 class="font-sansserif dark:text-white font-semibold mt-[5rem] mb-[1rem] mx-auto">Modifier un client</h2>
+  <form (ngSubmit)="submitForm()" class="dark:bg-gray-900 w-[55%] mx-auto">
     <div class="bg-slate-10">
       <div class="relative mb-3">
         <input

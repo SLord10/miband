@@ -56,6 +56,10 @@ export class HeartbeatComponent {
   }
 
 
+  darkModeEnabled = false;
 
+  toggleDarkMode() {
+    this.darkModeEnabled = !this.darkModeEnabled;
+  }
 }
 

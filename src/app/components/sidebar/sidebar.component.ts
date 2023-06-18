@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,4 +12,16 @@ export class SidebarComponent {
   hide() : void {
     this.collapse = this.collapse;
   }
+
+
+  @Output() darkModeToggled: EventEmitter<boolean> = new EventEmitter<boolean>();
+  darkModeEnabled = false;
+
+  toggleDarkMode() {
+    this.darkModeEnabled = !this.darkModeEnabled;
+    this.darkModeToggled.emit(this.darkModeEnabled);
+  }
+
+
+
 }
