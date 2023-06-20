@@ -23,6 +23,7 @@ export class ClientListComponent {
 
   ngOnInit(): void {
     this.getClients();
+    
   }
 
   getClients(): void {
@@ -33,10 +34,12 @@ export class ClientListComponent {
 
   getClientById(client:Client){
     this.clientService.getOneClient(client).subscribe(res=>{
-          this.selectedClient = client;
-          this.isModalOpen = true;
+      this.client=res;
+      this.isModalOpen = true;
+      this.selectedClient=res;
  
         })
+        
         
   }
 
